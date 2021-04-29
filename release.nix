@@ -38,6 +38,7 @@ let
     inherit evmdis;
     inherit go-ethereum-unlimited;
     inherit go-ethereum;
+    inherit celo-blockchain;
     inherit hevm;
     inherit qrtx-term;
     inherit qrtx;
