@@ -1,15 +1,15 @@
 package main
 
 import (
-  "github.com/ethereum/go-ethereum/common"
-  "github.com/ethereum/go-ethereum/common/math"
-  "github.com/ethereum/go-ethereum/common/hexutil"
-  "github.com/ethereum/go-ethereum/accounts"
-  "github.com/ethereum/go-ethereum/accounts/keystore"
-  "github.com/ethereum/go-ethereum/accounts/usbwallet"
-  "github.com/ethereum/go-ethereum/core/types"
-  "github.com/ethereum/go-ethereum/crypto"
-  "github.com/ethereum/go-ethereum/rlp"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/celo-org/celo-blockchain/common/math"
+	"github.com/celo-org/celo-blockchain/common/hexutil"
+	"github.com/celo-org/celo-blockchain/accounts"
+	"github.com/celo-org/celo-blockchain/accounts/keystore"
+	"github.com/celo-org/celo-blockchain/accounts/usbwallet"
+	"github.com/celo-org/celo-blockchain/core/types"
+	"github.com/celo-org/celo-blockchain/crypto"
+	"github.com/celo-org/celo-blockchain/rlp"
 
   "os"
   "fmt"
@@ -353,9 +353,9 @@ func main() {
 
         var tx *types.Transaction
         if create {
-          tx = types.NewContractCreation(nonce, value, gasLimit, gasPrice, data)
+		  tx = types.NewContractCreation(nonce, value, gasLimit, gasPrice, nil, nil,nil, data)
         } else {
-          tx = types.NewTransaction(nonce, to, value, gasLimit, gasPrice, data)
+		  tx = types.NewTransaction(nonce, to, value, gasLimit, gasPrice, nil, nil,nil, data)
         }
 
         signed, err := wallet.SignTxWithPassphrase(*acct, passphrase, tx, chainID)
