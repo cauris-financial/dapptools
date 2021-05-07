@@ -1,3 +1,4 @@
+This is a fork to allow support on Celo
 # Dapp tools by DappHub [![Chat](https://img.shields.io/badge/community-chat-blue.svg?style=flat-square)](https://dapphub.chat)
 
 Hello!
